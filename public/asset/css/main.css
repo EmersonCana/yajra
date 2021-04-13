@@ -1,0 +1,14 @@
+#paper {
+    height: 11in; width: 8.5in;
+    background: white;
+}
+
+@media print{
+    .bordered {
+        border: 1px solid black !important;
+    }
+
+    .pm-r {
+        margin-right: 30% !important;
+    }
+}
