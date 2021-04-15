@@ -20,14 +20,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- CSS Files -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{{asset('asset/css/style.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('asset/css/main.css')}}">
-    <link href="{{asset('/asset/now-ui/css/now-ui-dashboard.css?v=1.5.0')}}" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{{secure_assetsecure_asset('asset/css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{secure_asset('asset/css/main.css')}}">
+    <link href="{{secure_asset('/asset/now-ui/css/now-ui-dashboard.css?v=1.5.0')}}" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="{{asset('/asset/now-ui/demo/demo.css')}}" rel="stylesheet" />
+    <link href="{{secure_asset('/asset/now-ui/demo/demo.css')}}" rel="stylesheet" />
 
     <!-- DataTables -->
-    <link href="{{asset('/asset/DataTables/css/jquery.dataTables.css')}}" rel="stylesheet" />
+    <link href="{{secure_asset('/asset/DataTables/css/jquery.dataTables.css')}}" rel="stylesheet" />
 </head>
 <body class="">
     <div class="wrapper ">
@@ -37,23 +37,23 @@
     </div>
 
     <!--   Core JS Files   -->
-    <script src="{{asset('/asset/now-ui/js/core/jquery.min.js')}}"></script>
-    <script src="{{asset('/asset/now-ui/js/core/popper.min.js')}}"></script>
-    <script src="{{asset('/asset/now-ui/js/core/bootstrap.min.js')}}"></script>
-    <script src="{{asset('/asset/now-ui/js/plugins/perfect-scrollbar.jquery.min.js')}}"></script>
+    <script src="{{secure_asset('/asset/now-ui/js/core/jquery.min.js')}}"></script>
+    <script src="{{secure_asset('/asset/now-ui/js/core/popper.min.js')}}"></script>
+    <script src="{{secure_asset('/asset/now-ui/js/core/bootstrap.min.js')}}"></script>
+    <script src="{{secure_asset('/asset/now-ui/js/plugins/perfect-scrollbar.jquery.min.js')}}"></script>
     <!-- DivJs -->
-    <script src="{{asset('/asset/js/divjs/divjs.js')}}"></script>
+    <script src="{{secure_asset('/asset/js/divjs/divjs.js')}}"></script>
     <!--  Google Maps Plugin    -->
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
     <!-- Chart JS -->
-    <script src="{{asset('/asset/now-ui/js/plugins/chartjs.min.js')}}"></script>
+    <script src="{{secure_asset('/asset/now-ui/js/plugins/chartjs.min.js')}}"></script>
     <!--  Notifications Plugin    -->
-    <script src="{{asset('/asset/now-ui/js/plugins/bootstrap-notify.js')}}"></script>
+    <script src="{{secure_asset('/asset/now-ui/js/plugins/bootstrap-notify.js')}}"></script>
     <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="{{asset('/asset/now-ui/js/now-ui-dashboard.min.js?v=1.5.0')}}" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
-    <script src="{{asset('/asset/now-ui/demo/demo.js')}}"></script>
+    <script src="{{secure_asset('/asset/now-ui/js/now-ui-dashboard.min.js?v=1.5.0')}}" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
+    <script src="{{secure_asset('/asset/now-ui/demo/demo.js')}}"></script>
     <!-- DataTables -->
-    <script src="{{asset('/asset/DataTables/js/jquery.dataTables.js')}}"></script>
+    <script src="{{secure_asset('/asset/DataTables/js/jquery.dataTables.js')}}"></script>
     <script>
         
     
