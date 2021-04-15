@@ -51,7 +51,7 @@
     <script src="{{secure_asset('/asset/now-ui/js/plugins/bootstrap-notify.js')}}"></script>
     <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="{{secure_asset('/asset/now-ui/js/now-ui-dashboard.min.js?v=1.5.0')}}" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
-    <script src="{{secure_asset('/asset/now-ui/demo/demo.js')}}"></script>
+    
     <!-- DataTables -->
     <script src="{{secure_asset('/asset/DataTables/js/jquery.dataTables.js')}}"></script>
     <script>
