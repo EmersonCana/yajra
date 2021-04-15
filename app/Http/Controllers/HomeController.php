@@ -34,7 +34,7 @@ class HomeController extends Controller
     public function viewPayroll() {
         $employees = Employee::all();
         $attendance = Attendance::whereDate('time_in','=',Carbon::today()->isoFormat('Y-M-D'))->get();
-        
+        $summary = array();
         foreach($attendance as $a) {
             $to = '';
             if(!isset($a->time_out)) {
