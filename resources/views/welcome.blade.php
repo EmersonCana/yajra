@@ -11,7 +11,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 welcome mt-0 text-center">
-                <a href="#" class="p-0 mt-0"><img src="{{asset('asset/images/logo.png')}}" height="200px" width="auto"></a>
+                <a href="#" class="p-0 mt-0"><img src="{{secure_asset('asset/images/logo.png')}}" height="200px" width="auto"></a>
             </div>  
         </div>
         <div class="row">
@@ -45,7 +45,7 @@
         </div>
     </div>
 
-    <script src="{{asset('asset/js/jquery.js')}}"></script>
-    <script src="{{asset('asset/bootstrap/js/bootstrap.js')}}"></script>
+    <script src="{{asset('secure_asset/js/jquery.js')}}"></script>
+    <script src="{{asset('secure_asset/bootstrap/js/bootstrap.js')}}"></script>
 </body>
 </html>
