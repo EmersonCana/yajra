@@ -22,9 +22,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{secure_asset('asset/css/style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{secure_asset('asset/css/main.css')}}">
-    <link href="{{secure_asset('/asset/now-ui/css/now-ui-dashboard.css?v=1.5.0')}}" rel="stylesheet" />
-    <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="{{secure_asset('/asset/now-ui/demo/demo.css')}}" rel="stylesheet" />
+    <link href="{{asset('/asset/now-ui/css/now-ui-dashboard.css?v=1.5.0')}}" rel="stylesheet" />
 
     <!-- DataTables -->
     <link href="{{secure_asset('/asset/DataTables/css/jquery.dataTables.css')}}" rel="stylesheet" />
@@ -50,8 +48,7 @@
     <!--  Notifications Plugin    -->
     <script src="{{secure_asset('/asset/now-ui/js/plugins/bootstrap-notify.js')}}"></script>
     <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="{{secure_asset('/asset/now-ui/js/now-ui-dashboard.min.js?v=1.5.0')}}" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
-    
+    <script src="{{asset('/asset/now-ui/js/now-ui-dashboard.min.js?v=1.5.0')}}" type="text/javascript"></script>
     <!-- DataTables -->
     <script src="{{secure_asset('/asset/DataTables/js/jquery.dataTables.js')}}"></script>
     <script>
