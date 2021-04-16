@@ -28,7 +28,11 @@
             <div class="row">
                 <div class="col-lg-6 col-sm-12">
                     <label for="position">Position:</label>
-                    <input type="text" name="position" class="form-control" maxlength="30">
+                    <select class="form-control" name="position">
+                        <option value="1">Position 1</option>
+                        <option value="2">Position 2</option>
+                        <option value="3">Position 3</option>
+                    </select>
                 </div>
                 <div class="col-lg-6 col-sm-12">
                     <label for="rate">Rate:</label>
