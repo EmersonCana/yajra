@@ -24,7 +24,7 @@ class Employees extends Migration
             $table->timestamps();
         });
         
-        DB::statement(“ALTER SEQUENCE $table_$primarykey_seq MINVALUE 102020 START 102020 RESTART 102020”);
+        DB::statement(“ALTER SEQUENCE employees_id_seq MINVALUE 102020 START 102020 RESTART 102020”);
     }
 
     /**
