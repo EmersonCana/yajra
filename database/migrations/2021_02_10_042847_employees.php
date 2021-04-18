@@ -22,6 +22,9 @@ class Employees extends Migration
             $table->decimal('rate',11,2);
             $table->timestamps();
         });
+        
+        DB::table('employees')->insert(['id' => 102021, 'first_name' => 'whatever', 'last_name' => 'w', 'middle_initial' => 's', 'position' => '1', 'rate' => '1']);
+        DB::table('employees')->where('id', 102021)->delete();
     }
 
     /**
