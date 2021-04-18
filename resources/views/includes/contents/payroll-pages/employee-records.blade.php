@@ -65,6 +65,23 @@
                                                 <div class="modal-dialog modal-sm">
                                                     <div class="modal-content">
                                                     <iframe src="http://maps.google.com/maps?q={{$a->lat}},{{$a->long}}&z=16&output=embed" frameborder="0"></iframe>
+                                                    <table class="table bg-white">
+                                                        <tr>
+                                                            <td>Mac Address:</td>
+                                                            <td>{{App\Logs::where('employee_id','=',$a->employee_id)->where('created_at',$a->time_in)->first()->mac}}<br>
+                                                               
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>IP Address:</td>
+                                                            <td>{{App\Logs::where('employee_id','=',$a->employee_id)->where('created_at',$a->time_in)->first()->ip}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Browser:</td>
+                                                            <td>{{App\Logs::where('employee_id','=',$a->employee_id)->where('created_at',$a->time_in)->first()->agent}}</td>
+                                                        </tr>
+                                                    </table>
+                                                    
                                                     </div>
                                                 </div>
                                             </div>
