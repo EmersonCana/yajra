@@ -34,7 +34,7 @@ class LogsController extends Controller
             $log->employee_id = $request->employee_id;
             $log->long = $request->long;
             $log->lat = $request->lat;
-            $log->mac = $request->mac;
+            $log->mac = "0:0:0:0:0:0";
             $log->ip = $request->ip;
             $log->agent = $request->agent;
             $log->save();
