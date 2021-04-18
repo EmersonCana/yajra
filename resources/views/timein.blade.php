@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-lg-4 offset-lg-4 col-sm-12">
             <div class="card bg-dark text-light">
