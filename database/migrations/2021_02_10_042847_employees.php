@@ -22,8 +22,6 @@ class Employees extends Migration
             $table->decimal('rate',11,2);
             $table->timestamps();
         });
-
-        DB::update('ALTER TABLE employees AUTO_INCREMENT = 102021;');
     }
 
     /**
