@@ -23,7 +23,7 @@ class Employees extends Migration
             $table->timestamps();
         });
 
-        \DB::statement('ALTER TABLE employees AUTO_INCREMENT = 102021;');
+        DB::statement('ALTER TABLE employees AUTO_INCREMENT = 102021;');
     }
 
     /**
