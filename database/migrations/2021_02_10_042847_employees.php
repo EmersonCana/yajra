@@ -23,8 +23,11 @@ class Employees extends Migration
             $table->decimal('rate',11,2);
             $table->timestamps();
         });
-        
-        DB::statement("ALTER SEQUENCE employees_id_seq MINVALUE 102020 START 102020 RESTART 102020");
+        DB::statement("CREATE SEQUENCE employees_id_seq");
+        DB::statement("ALTER TABLE employees");
+        DB::statement("ALTER id");
+        DB::statement("SET DEFAULT NEXTVAL('project_id_seq');")
+        DB::statement("ALTER SEQUENCE employees_id_seq RESTART 102020");
     }
 
     /**
