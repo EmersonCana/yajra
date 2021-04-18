@@ -9,6 +9,7 @@
                 <div class="card-body">
                     <table class="cell-border compact stripe" id="employees_table">
                         <thead>
+                            <th>ID</th>
                             <th>Last Name</th>
                             <th>First Name</th>
                             <th>Middle Initial</th>
@@ -19,6 +20,7 @@
                         <tbody>
                             @foreach($employees as $employee)
                             <tr>
+                                <td>{{$employee->id}}</td>
                                 <td>{{$employee->last_name}}</td>
                                 <td>{{$employee->first_name}}</td>
                                 <td>{{$employee->middle_initial}}</td>
