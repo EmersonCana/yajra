@@ -24,8 +24,7 @@ class Employees extends Migration
             $table->timestamps();
         });
         
-        DB::table('employees')->insert(['id' => 102021, 'first_name' => 'whatever', 'last_name' => 'w', 'middle_initial' => 's', 'position' => '1', 'rate' => '1']);
-        DB::table('employees')->where('id', 102021)->delete();
+        DB::statement(“ALTER SEQUENCE $table_$primarykey_seq MINVALUE 102020 START 102020 RESTART 102020”);
     }
 
     /**
