@@ -14,7 +14,7 @@ class Employees extends Migration
     public function up()
     {
         Schema::create('employees', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id')->unsigned();
             $table->string('first_name');
             $table->string('last_name');
             $table->string('middle_initial');
@@ -22,6 +22,8 @@ class Employees extends Migration
             $table->decimal('rate',11,2);
             $table->timestamps();
         });
+
+        \DB::statement('ALTER TABLE employees AUTO_INCREMENT = 102021;');
     }
 
     /**
