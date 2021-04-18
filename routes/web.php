@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,9 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/timein', function() {
-    return view('timein');
+Route::get('/timein', function(Request $request) {
+    $macaddress = substr(exec('getmac'), 0, 17);
+    return view('timein', compact(['macaddress']));
 });
+
+Route::match(['PUT','POST'], '/time-in-or-out', 'LogsController@logInOut')->name('timeInOut');
 
 Auth::routes();
 
