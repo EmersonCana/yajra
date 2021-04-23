@@ -96,8 +96,30 @@
                                                 </div>
                                             </div>
                                         </td>
+                                        <td>
+                                            <a onclick="deleteAttendance()"><i class="fas fa-times"></i></a>
+                                        </td>
                                     </tr>
                                     <script defer>
+                                    function deleteAttendance() {
+                                        $.ajax({
+                                            url: "functions/delete-attendance/'.$a->id.'",
+                                            type: "POST",
+                                            dataType: "html",
+                                            data: { 
+                                                "_DELETE": "'.csrf_token() .'"
+                                            },
+                                            success: function(data){
+                                                console.log(data);
+                                                reloadRecord();
+                                            },
+                                            error: function(xhr, status, error) {
+                                                var err = eval("(" + xhr.responseText + ")");
+                                                alert(err.Message);
+                                                console.log(not);
+                                            }
+                                        });
+                                    }
                                         $('#add-time-out-input-{{$a->id}}').hide();
                                         $('#add-time-out-{{$a->id}}').click( () => {
                                             $('#add-time-out-input-{{$a->id}}').show();
