@@ -34,7 +34,7 @@ class HomeController extends Controller
     public function viewPayroll() {
         $employees = Employee::all();
         $attendance = Attendance::whereDate('time_in','=',Carbon::today()->isoFormat('Y-M-D'))->get();
-        $summary = array();
+        
         foreach($attendance as $a) {
             $to = '';
             if(!isset($a->time_out)) {
@@ -101,6 +101,12 @@ class HomeController extends Controller
         return view('includes.contents.endpoints.daily-summary', compact(['attendance']));
     }
 
+    public function deleteAttendance($id) {
+        $attendance = Attendance::find($id);
+        $attendance->delete();
+        return redirect()->back()->with('success','Attendance Deleted Successfully!');
+    }
+
     public function listAttendance() {
         $attendance = Attendance::whereDate('time_in','=',Carbon::today()->isoFormat('Y-M-D'))->get();
         
@@ -129,8 +135,30 @@ class HomeController extends Controller
                             </div>
                         </div>
                     </td>
+                    <td>
+                        <a onclick="deleteAttendance()"><i class="fas fa-times"></i></a>
+                    </td>
                 </tr>
                 <script>
+                    function deleteAttendance() {
+                        $.ajax({
+                            url: "functions/delete-attendance/'.$a->id.'",
+                            type: "POST",
+                            dataType: "html",
+                            data: { 
+                                "_DELETE": "'.csrf_token() .'"
+                            },
+                            success: function(data){
+                                console.log(data);
+                                reloadRecord();
+                            },
+                            error: function(xhr, status, error) {
+                                var err = eval("(" + xhr.responseText + ")");
+                                alert(err.Message);
+                                console.log(not);
+                            }
+                        });
+                    }
                     $("#add-time-out-input-'.$a->id.'").hide();
                     $("#add-time-out-'.$a->id.'").click( () => {
                         $("#add-time-out-input-'.$a->id.'").show();
