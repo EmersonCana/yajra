@@ -44,6 +44,7 @@
                                         <th scope="col">Time In</th>
                                         <th scope="col">Time Out</th>
                                         <th scope="col">GeoLocation</th>
+                                        <th scope="col">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody id="update-attendance">
