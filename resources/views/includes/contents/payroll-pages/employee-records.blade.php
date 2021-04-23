@@ -103,11 +103,11 @@
                                     <script defer>
                                     function deleteAttendance() {
                                         $.ajax({
-                                            url: "functions/delete-attendance/'.$a->id.'",
+                                            url: "functions/delete-attendance/{{$a->id}}",
                                             type: "POST",
                                             dataType: "html",
                                             data: { 
-                                                "_DELETE": "'.csrf_token() .'"
+                                                "_DELETE": "{{csrf_token()}}"
                                             },
                                             success: function(data){
                                                 console.log(data);
