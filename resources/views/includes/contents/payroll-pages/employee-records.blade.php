@@ -44,7 +44,6 @@
                                         <th scope="col">Time In</th>
                                         <th scope="col">Time Out</th>
                                         <th scope="col">GeoLocation</th>
-                                        <th scope="col">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody id="update-attendance">
@@ -69,17 +68,27 @@
                                                     <table class="table bg-white">
                                                         <tr>
                                                             <td>Mac Address:</td>
-                                                            <td>{{App\Logs::where('employee_id','=',$a->employee_id)->where('created_at',$a->time_in)->first()->mac}}<br>
-                                                               
+                                                            <td>
+                                                            @if(App\Logs::where('employee_id','=',$a->employee_id)->where('created_at',$a->time_in)->first()->mac)
+                                                            {{App\Logs::where('employee_id','=',$a->employee_id)->where('created_at',$a->time_in)->first()->mac}}<br>
+                                                            @endif
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>IP Address:</td>
-                                                            <td>{{App\Logs::where('employee_id','=',$a->employee_id)->where('created_at',$a->time_in)->first()->ip}}</td>
+                                                            <td>
+                                                            @if(App\Logs::where('employee_id','=',$a->employee_id)->where('created_at',$a->time_in)->first()->ip)
+                                                            {{App\Logs::where('employee_id','=',$a->employee_id)->where('created_at',$a->time_in)->first()->ip}}
+                                                            @endif
+                                                            </td>
                                                         </tr>
                                                         <tr>
                                                             <td>Browser:</td>
-                                                            <td>{{App\Logs::where('employee_id','=',$a->employee_id)->where('created_at',$a->time_in)->first()->agent}}</td>
+                                                            <td>
+                                                            @if(App\Logs::where('employee_id','=',$a->employee_id)->where('created_at',$a->time_in)->first()->agent)
+                                                            {{App\Logs::where('employee_id','=',$a->employee_id)->where('created_at',$a->time_in)->first()->agent}}
+                                                            @endif
+                                                            </td>
                                                         </tr>
                                                     </table>
                                                     
