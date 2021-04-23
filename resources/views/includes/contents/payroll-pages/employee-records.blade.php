@@ -97,7 +97,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a onclick="deleteAttendance()"><i class="fas fa-times"></i></a>
+                                            <a href="#" onclick="deleteAttendance()"><i class="fas fa-times"></i></a>
                                         </td>
                                     </tr>
                                     <script defer>
