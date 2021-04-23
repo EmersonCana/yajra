@@ -137,7 +137,7 @@ class HomeController extends Controller
                         </div>
                     </td>
                     <td>
-                        <a href="javascript:(0);" onclick="deleteAttendance()">&times;</a>
+                        <a href="#" onclick="deleteAttendance()">x</a>
                     </td>
                 </tr>
                 <script>
