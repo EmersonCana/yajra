@@ -69,7 +69,7 @@
                                                         <tr>
                                                             <td>Mac Address:</td>
                                                             <td>
-                                                            @if(App\Logs::where('employee_id','=',$a->employee_id)->where('created_at',$a->time_in)->first()->mac)
+                                                            @if(isset(App\Logs::where('employee_id','=',$a->employee_id)->where('created_at',$a->time_in)->first()->mac))
                                                             {{App\Logs::where('employee_id','=',$a->employee_id)->where('created_at',$a->time_in)->first()->mac}}<br>
                                                             @endif
                                                             </td>
@@ -77,7 +77,7 @@
                                                         <tr>
                                                             <td>IP Address:</td>
                                                             <td>
-                                                            @if(App\Logs::where('employee_id','=',$a->employee_id)->where('created_at',$a->time_in)->first()->ip)
+                                                            @if(isset(App\Logs::where('employee_id','=',$a->employee_id)->where('created_at',$a->time_in)->first()->ip))
                                                             {{App\Logs::where('employee_id','=',$a->employee_id)->where('created_at',$a->time_in)->first()->ip}}
                                                             @endif
                                                             </td>
@@ -85,7 +85,7 @@
                                                         <tr>
                                                             <td>Browser:</td>
                                                             <td>
-                                                            @if(App\Logs::where('employee_id','=',$a->employee_id)->where('created_at',$a->time_in)->first()->agent)
+                                                            @if(isset(App\Logs::where('employee_id','=',$a->employee_id)->where('created_at',$a->time_in)->first()->agent))
                                                             {{App\Logs::where('employee_id','=',$a->employee_id)->where('created_at',$a->time_in)->first()->agent}}
                                                             @endif
                                                             </td>
