@@ -32,7 +32,7 @@ Route::get('/payroll', 'HomeController@viewPayroll')->name('payroll');
 Route::post('/functions/add-employee', 'HomeController@addEmployee')->name('addEmployee');
 Route::match(['PUT','POST'],'/functions/edit-employee/{id}', 'HomeController@editEmployee')->name('editEmployee');
 Route::match(['DELETE','POST'],'/functions/delete-employee/{id}', 'HomeController@deleteEmployee')->name('deleteEmployee');
-
+Route::match(['DELETE','POST'], '/functions/delete-attendance/{id}', 'HomeController@deleteAttendance')->name('deleteAttendance');
 Route::get('/function/list-attendance','HomeController@listAttendance')->name('listAttendance');
 Route::match(['get','POST'],'/functions/add-attendance','HomeController@addAttendance')->name('addAttendance');
 Route::match(['PUT','POST'],'/functions/edit-attendance','HomeController@editAttendance')->name('editAttendance');
