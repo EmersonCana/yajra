@@ -137,7 +137,7 @@ class HomeController extends Controller
                         </div>
                     </td>
                     <td>
-                        <a onclick="deleteAttendance()"><i class="fas fa-times"></i></a>
+                        <a onclick="deleteAttendance()">&times;</a>
                     </td>
                 </tr>
                 <script>
