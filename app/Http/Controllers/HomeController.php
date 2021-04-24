@@ -224,8 +224,16 @@ class HomeController extends Controller
         $attendance->time_in = Carbon::parse($request->timeIn)->isoFormat('Y-M-D HH:mm:ss');
         $attendance->start_time = Carbon::parse('today 8am', 'Asia/Manila');
         $attendance->end_time = Carbon::parse('today 5pm', 'Asia/Manila');
-        $attendance->long = $request->long;
-        $attendance->lat = $request->lat;
+        if(!isset($request->long)) {
+            $attendance->long = 0;
+        }else{
+            $attendance->long = $request->long;
+        }
+        if(!isset($request->lat)) {
+            $attendance->lat = 0;
+        }else{
+            $attendance->lat = $request->lat;
+        }
         $attendance->save();
 
         return redirect()->route('listAttendance');
