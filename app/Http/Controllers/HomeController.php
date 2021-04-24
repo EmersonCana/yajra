@@ -153,7 +153,7 @@ class HomeController extends Controller
                             dataType: "html",
                             success: function(data){
                                 $.ajax({
-                                    url: "functions/list-attendance",
+                                    url: "function/list-attendance",
                                     type: "GET",
                                     dataType: "html",
                                     success: function(data){
