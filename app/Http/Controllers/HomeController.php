@@ -150,7 +150,6 @@ class HomeController extends Controller
                                 "_DELETE": "'.csrf_token() .'"
                             },
                             success: function(data){
-                                console.log(data);
                                 $.ajax({
                                     url: "functions/list-attendance",
                                     type: "GET",
