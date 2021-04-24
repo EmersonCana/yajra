@@ -151,6 +151,19 @@ class HomeController extends Controller
                             },
                             success: function(data){
                                 console.log(data);
+                                $.ajax({
+                                    url: "functions/list-attendance",
+                                    type: "GET",
+                                    dataType: "html",
+                                    success: function(data){
+                                        $("#update-attendance").html(data);
+                                    },
+                                    error: function(xhr, status, error) {
+                                        var err = eval("(" + xhr.responseText + ")");
+                                        alert(err.Message);
+                                        console.log(not);
+                                    }
+                                });
                                 reloadRecord();
                             },
                             error: function(xhr, status, error) {
