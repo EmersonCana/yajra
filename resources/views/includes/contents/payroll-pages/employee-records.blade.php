@@ -112,6 +112,7 @@
                                             success: function(data){
                                                 console.log(data);
                                                 reloadRecord();
+                                                listAttendance()
                                             },
                                             error: function(xhr, status, error) {
                                                 var err = eval("(" + xhr.responseText + ")");
@@ -278,6 +279,21 @@ $('#cd').change(() => {
 });
 
 
+function listAttendance() {
+    $.ajax({
+        url: "{{route('listAttendance')}}",
+        type: "GET",
+        dataType: "html",
+        success: function(data){
+            $('#update-attendance').html(data);
+        },
+        error: function(xhr, status, error) {
+            var err = eval("(" + xhr.responseText + ")");
+            alert(err.Message);
+            console.log(not);
+        }
+    });
+}
 
 function reloadRecord() {
     $.ajax({
