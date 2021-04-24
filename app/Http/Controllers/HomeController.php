@@ -143,12 +143,12 @@ class HomeController extends Controller
                 <script>
                     function deleteAttendance() {
                         $.ajax({
+                            headers: {
+                                "X-CSRF-TOKEN": $("meta[name="csrf-token"]").attr("content")
+                              },
                             url: "functions/delete-attendance/'.$a->id.'",
                             type: "POST",
                             dataType: "html",
-                            data: { 
-                                "_DELETE": "'.csrf_token() .'"
-                            },
                             success: function(data){
                                 $.ajax({
                                     url: "functions/list-attendance",
